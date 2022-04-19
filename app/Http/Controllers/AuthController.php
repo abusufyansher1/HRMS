@@ -3,6 +3,10 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+
+
+use Illuminate\Support\Facades\Route;
+use Toastr;
 class AuthController extends Controller
 {
 	function index(Request $req1)
@@ -20,8 +24,10 @@ class AuthController extends Controller
             ->first();
          if(!$users)
    	{
-   		session()->flash('data','Error! Invalid credentials');
-     return redirect('/');
+   		// session()->flash('data','Error! Invalid credentials');
+           
+    Toastr::error('Invalid credentials', 'Error!', ["positionClass" => "toast-top-right"]);
+     return redirect('/login');
    		// return "";
    	}
    	else{
@@ -31,10 +37,13 @@ class AuthController extends Controller
    		 session(['username' => $users->username]);
    		 session(['role' => $users->role]);
          session(['code' => "admin"]);
+         
+    Toastr::success('Login successful', 'Success!', ["positionClass" => "toast-top-right"]);
             return redirect('/admin/dashboard/');
    		}
    		else{
-   		session()->flash('data','Invalid Role');
+   	
+            Toastr::warning('Invalid role', 'Warning!', ["positionClass" => "toast-top-right"]);
      return redirect('/');
    		}
 

@@ -15,7 +15,7 @@
   <!-- Ionicons -->
   <!--<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">-->
   <!-- Tempusdominus Bootstrap 4 -->
-  <link rel="stylesheet" href="{{ asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
+  <!-- <link rel="stylesheet" href="{{ asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}"> -->
   <!-- iCheck -->
   <!--<link rel="stylesheet" href="{{ asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">-->
   <!-- JQVMap -->
@@ -28,6 +28,14 @@
   <!--<link rel="stylesheet" href="{{ asset('plugins/daterangepicker/daterangepicker.css')}}">-->
   <!-- summernote -->
   <!--<link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.min.css')}}">-->
+  
+  <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
+  <style>
+ ul.nav-treeview li>a.nav-link{
+    padding-left:30px;
+   
+  }
+    </style>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -56,17 +64,17 @@
     <!-- Brand Logo -->
     <a  class="brand-link">
     
-      <span class="brand-text font-weight-light">Zaviyar Enterprises</span>
+      <span class="brand-text font-weight-light">Pacific Solutions</span>
     </a>
 
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-       <img src='https://purepng.com/public/uploads/large/purepng.com-fuel-petrolfuelpetrolgasolingasjerrycan-1701528461473lf5ct.png'>
+       <img src='https://pacific-solutions.co.uk/wp-content/uploads/2021/02/pacific-logo-2.png'>
         <div class="info">
             
-          <a href="#" class="d-block">{{session('name');}}</a>
+          <a href="#" class="d-block">{{session('username');}}</a>
         </div>
       </div>
 
@@ -74,7 +82,7 @@
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <ul class="nav nav-pills nav-sidebar flex-column text-sm" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
         
@@ -88,56 +96,164 @@
             </a>
           </li>
            <li class="nav-item">
-            <a href="/users/purchase" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-shopping-cart"></i>
               <p>
-                Purchase
+                Online applications
                
               </p>
             </a>
           </li>
-           <li class="nav-item">
-            <a href="/users/sale" class="nav-link">
-              <i class="nav-icon fas fa-shopping-cart"></i>
-              <p>
-                Sale
-               
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="/users/products" class="nav-link">
-              <i class="nav-icon fas fa-cubes"></i>
-              <p>
-                Products
-               
-              </p>
-            </a>
-          </li>
+         
            <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
-                Statement
+                Clients mgt.
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/users/SaleStatement" class="nav-link">
+                <a href="#" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Sale statement</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="/users/PurchaseStatement" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Purchase statement</p>
+                  <p>View</p>
                 </a>
               </li>
               
+              
             </ul>
           </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+                Employees mgt.
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item ">
+                <a href="#" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View</p>
+                </a>
+              </li>
+              
+              
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-shopping-cart"></i>
+              <p>
+                Projects
+               
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-shopping-cart"></i>
+              <p>
+                Schedules
+               
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+                Reports
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Date wise report</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Client wise report</p>
+                </a>
+              </li>              
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+                Summary
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Datewise summary</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Client wise summary</p>
+                </a>
+              </li>              
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+                Notifications mgt.
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View</p>
+                </a>
+              </li>
+              
+              
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+                Accounts mgt.
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View</p>
+                </a>
+              </li>
+              
+              
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-database"></i>
+              <p>
+                Backup
+               
+              </p>
+            </a>
+          </li> 
 <li class="nav-item">
             <a href="/logout" class="nav-link">
               <i class="nav-icon fas fa-lock"></i>
@@ -184,7 +300,7 @@
     <strong>Copyright &copy; 2022 </strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.1.0
+      <b>Version</b> 1.0.0
     </div>
   </footer>
 
@@ -215,7 +331,7 @@
 <!--<script src="{{ asset('plugins/moment/moment.min.js')}}"></script>-->
 <!--<script src="{{ asset('plugins/daterangepicker/daterangepicker.js')}}"></script>-->
 <!-- Tempusdominus Bootstrap 4 -->
-<script src="{{ asset('plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
+<!-- <script src="{{ asset('plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script> -->
 <!-- Summernote -->
 <!--<script src="{{ asset('plugins/summernote/summernote-bs4.min.js')}}"></script>-->
 <!-- overlayScrollbars -->
@@ -243,10 +359,13 @@
       "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
        "paging": false,
-    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    })
+    // .buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
   });
 </script>
 @section('footer')
 @show
+<script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+        {!! Toastr::message() !!}
 </body>
 </html>

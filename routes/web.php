@@ -5,7 +5,6 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Http\Request;
 use App\Http\Middleware\AdminProtected;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,7 +27,11 @@ Route::get('/logout', function (Request $request) {
 
  Route::get('/', function () 
  {
+    // session()->flash('data','Error! Invalid credentials');
+
+    // Toastr::success('Messages in here', 'Title', ["positionClass" => "toast-top-right"]);
    return redirect('/login');
+   
  });
 
  Route::get('/login', function () {

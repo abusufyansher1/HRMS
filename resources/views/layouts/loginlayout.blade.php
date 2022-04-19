@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css')}}">
+  
+  <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
   <!-- icheck bootstrap -->
   <!--<link rel="stylesheet" href="{{ asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">-->
   <!-- Theme style -->
@@ -17,10 +19,15 @@
 <body class="hold-transition login-page" >
 <div class="login-box">
   <div class="login-logo">
-      <img src='https://purepng.com/public/uploads/large/purepng.com-fuel-petrolfuelpetrolgasolingasjerrycan-1701528461473lf5ct.png' width='50%'>
+      <img src='https://pacific-solutions.co.uk/wp-content/uploads/2021/02/pacific-logo-2.png' width='50%'>
     @section('logintitle')
     @show
   </div>
+  @if(session()->has('data'))
+                                <div class="text-danger text-center">
+                                    {{ session()->get('data') }}
+                                </div>
+                            @endif
   <!-- /.login-logo -->
   <div class="card" style='opacity:0.9'>
     <div class="card-body login-card-body">
@@ -80,5 +87,8 @@
 <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('dist/js/adminlte.min.js')}}"></script>
+
+        <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+        {!! Toastr::message() !!}
 </body>
 </html>

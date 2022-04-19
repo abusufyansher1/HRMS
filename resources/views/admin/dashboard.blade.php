@@ -14,7 +14,7 @@
               <div class="inner">
                 <h3></h3>
 
-                <p>Customers</p>
+                <p>Active clients</p>
               </div>
               <div class="icon">
                 <i class="fas fa-users"></i>
@@ -29,7 +29,7 @@
               <div class="inner">
                 <h3><sup style="font-size: 20px"></sup></h3>
 
-                <p>Vendors</p>
+                <p>Active employees</p>
               </div>
               <div class="icon">
                 <i class="fas fa-user-tag"></i>
@@ -44,7 +44,7 @@
               <div class="inner">
                 <h3></h3>
 
-                <p>Product (Registered)</p>
+                <p>Pending projects</p>
               </div>
               <div class="icon">
                 <i class="fas fa-cubes"></i>
@@ -58,9 +58,9 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>OUT</h3>
+                <h3></h3>
 
-                <p>New Sale</p>
+                <p>Completed projects</p>
               </div>
               <div class="icon">
                 <i class="fas fa-shopping-cart"></i>
@@ -76,9 +76,9 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>IN</h3>
+                <h3></h3>
 
-                <p>New Purchase</p>
+                <p>Cancelled projects</p>
               </div>
               <div class="icon">
                 <i class="fas fa-shopping-cart"></i>
