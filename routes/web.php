@@ -23,6 +23,9 @@ Route::get('/logout', function (Request $request) {
  Route::group(['middleware'=>['AdminProtected']],function()
  {
     Route::get('/admin/dashboard', [AdminController::class,'Dashboard']);
+    
+    Route::get('/admin/ViewClients', [AdminController::class,'ViewClients']);
+    Route::get('/admin/employees/{activestatus}', [AdminController::class,'ViewUsersByStatus']);
  });
 
  Route::get('/', function () 

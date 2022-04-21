@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>@yield('title')</title>
-
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -87,7 +86,7 @@
                with font-awesome or any other icon font library -->
         
           <li class="nav-item">
-            <a href="/users/dashboard" class="nav-link">
+            <a href="/admin/dashboard" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -96,7 +95,7 @@
             </a>
           </li>
            <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="/admin/employees/1" class="nav-link">
               <i class="nav-icon fas fa-shopping-cart"></i>
               <p>
                 Online applications
@@ -115,7 +114,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link ">
+                <a href="/admin/ViewClients" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>View</p>
                 </a>
@@ -134,7 +133,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item ">
-                <a href="#" class="nav-link ">
+                <a href="/admin/employees/0" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>View</p>
                 </a>

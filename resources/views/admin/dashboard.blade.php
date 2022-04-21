@@ -12,7 +12,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3></h3>
+                <h3>{{ $clients }}</h3>
 
                 <p>Active clients</p>
               </div>
@@ -27,7 +27,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3><sup style="font-size: 20px"></sup></h3>
+                <h3>{{ $users->activeEmployees }}</h3>
 
                 <p>Active employees</p>
               </div>
@@ -42,7 +42,7 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3></h3>
+                <h3>{{$projects->pending}}</h3>
 
                 <p>Pending projects</p>
               </div>
@@ -58,7 +58,7 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3></h3>
+                <h3>{{$projects->completed}}</h3>
 
                 <p>Completed projects</p>
               </div>
@@ -76,7 +76,7 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3></h3>
+                <h3>{{$projects->cancelled}}</h3>
 
                 <p>Cancelled projects</p>
               </div>
